@@ -27,7 +27,13 @@ public class CalculusMain {
 	    	tempTerm.exponent = s.nextInt();
 	    	int currentExponent = tempTerm.exponent;
 	    	
-	    	int resultCoeficient = (currentExponent-1)*currentCoefficient;
+	    	int resultCoeficient = currentExponent*currentCoefficient;
+	    	int resultExponent  = currentExponent-1;
+	    	
+	    	System.out.println("The result coeff "+resultCoeficient);
+	    	System.out.println("The result exp "+resultExponent);
+
+	    	
 	    	
 	    	
 	    	
