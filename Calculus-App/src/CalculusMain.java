@@ -2,6 +2,7 @@ import java.util.Scanner; //
 
 public class CalculusMain { 	
 	public CalculusMain() {
+		String output=" ";
 		Scanner s = new Scanner(System.in);
 
 		int numberOfTerms = 0;
@@ -10,15 +11,25 @@ public class CalculusMain {
 		// make a class foreach term
 	    numberOfTerms = s.nextInt();
 	    
-	    //int terms[numberOfTerms];
 	    
 	    term[] terms = new term[numberOfTerms];
 	    for(int i = 0; i<numberOfTerms; i++) {
 	    	System.out.println("Term " + i +" "); 
 	    	terms[i] = new term();
 	    	term tempTerm = terms[i];
+	    	System.out.print("Enter Coefficient: ");
+	    	
 	    	tempTerm.coefficient = s.nextInt();
+	    	int currentCoefficient = tempTerm.coefficient;
+
+	    	System.out.print("Enter Exponent: ");
+
 	    	tempTerm.exponent = s.nextInt();
+	    	int currentExponent = tempTerm.exponent;
+	    	
+	    	int resultCoeficient = (currentExponent-1)*currentCoefficient;
+	    	
+	    	
 	    	
 	    }
 	    
