@@ -19,6 +19,18 @@ public class CalculusMain {
 	    	System.out.println("Term " +termNumber+" "); 
 	    	terms[i] = new term();
 	    	term tempTerm = terms[i];
+	    	System.out.print("Enter Sign (+/-): ");
+	    	tempTerm.sign = s.next();
+	    	
+	    	String currentSign = tempTerm.sign;
+	    	
+	    	if(currentSign.equals("+") && i == 0) {
+	    		tempTerm.sign ="";
+	    	}
+	    	
+	    	System.out.println(currentSign);
+	    	
+	    	
 	    	System.out.print("Enter Coefficient: ");
 	    	
 	    	tempTerm.coefficient = s.nextInt();
@@ -37,7 +49,6 @@ public class CalculusMain {
 
 	public static void main(String[] args) {
 		System.out.println("Running...");
-		System.out.println("Maganda Si Bea");
 
 		
 		new CalculusMain();

@@ -16,7 +16,7 @@ public class term {
 	}
 	
 	public term(int c) {
-		coefficient =c;
+		coefficient = c;
 	}
 	
 	public void compute() {
@@ -29,17 +29,21 @@ public class term {
 	}
 	
 	public String addResult() {
+		
 		compute();
 		String finalResult ="";
+		
+
+		
 		if(coefficient != 0 && exponent != 0) {
 			// convert int to string 
 			String tempCoef = Integer.toString(coefficient);
 			String tempExp = Integer.toString(exponent);
 			
 			if(exponent == 1) {
-				finalResult += tempCoef+"x"+" ";
+				finalResult += sign+tempCoef+"x";
 			}else {
-				finalResult += tempCoef+"x"+"^"+tempExp+ " ";
+				finalResult += sign+tempCoef+"x"+"^"+tempExp;
 			}
 			
 
