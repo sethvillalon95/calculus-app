@@ -2,7 +2,8 @@
 public class term {
 	int coefficient = 1;
 	int exponent = 1;
-	
+	String sign="+";
+
 	
 	// do the calculations here for better encapsulation 
 	public term() {
@@ -30,30 +31,21 @@ public class term {
 	public String addResult() {
 		compute();
 		String finalResult ="";
-		if(coefficient != 0) {
+		if(coefficient != 0 && exponent != 0) {
 			// convert int to string 
 			String tempCoef = Integer.toString(coefficient);
 			String tempExp = Integer.toString(exponent);
 			
-//			System.out.println("The Coefficient is "+ tempCoef + "The exponent is "+ tempExp);
-			
-			
-			
 			if(exponent == 1) {
-				finalResult += tempCoef+"x";
+				finalResult += tempCoef+"x"+" ";
 			}else {
-				finalResult += tempCoef+"x"+"^"+tempExp;
+				finalResult += tempCoef+"x"+"^"+tempExp+ " ";
 			}
-			
-			// return the coefficient with just x 
-//			if(coefficient ==1) {
-//				finalResult+= temp
-//			}
-			
 			
 
 			
-			// return 
+
+			
 			return finalResult;
 
 		}
