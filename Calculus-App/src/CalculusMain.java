@@ -2,7 +2,7 @@ import java.util.Scanner; //
 
 public class CalculusMain { 	
 	public CalculusMain() {
-		String output=" ";
+		String output="";
 		Scanner s = new Scanner(System.in);
 
 		int numberOfTerms = 0;
@@ -11,7 +11,7 @@ public class CalculusMain {
 		// make a class foreach term
 	    numberOfTerms = s.nextInt();
 	    
-	    
+	    System.out.println("Please Input the values and put zero as the exponent of a constant");
 	    term[] terms = new term[numberOfTerms];
 	    for(int i = 0; i<numberOfTerms; i++) {
 	    	System.out.println("Term " + i +" "); 
@@ -25,13 +25,15 @@ public class CalculusMain {
 	    	System.out.print("Enter Exponent: ");
 
 	    	tempTerm.exponent = s.nextInt();
-	    	int currentExponent = tempTerm.exponent;
 	    	
-	    	int resultCoeficient = currentExponent*currentCoefficient;
-	    	int resultExponent  = currentExponent-1;
-	    	
-	    	System.out.println("The result coeff "+resultCoeficient);
-	    	System.out.println("The result exp "+resultExponent);
+	    	output +=tempTerm.addResult();
+//	    	int currentExponent = tempTerm.exponent;
+//	    	
+//	    	int resultCoeficient = currentExponent*currentCoefficient;
+//	    	int resultExponent  = currentExponent-1;
+//	    	
+//	    	System.out.println("The result coeff "+resultCoeficient);
+//	    	System.out.println("The result exp "+resultExponent);
 
 	    	
 	    	
@@ -43,6 +45,8 @@ public class CalculusMain {
 	    
 
 		System.out.println("Prining valu of numberOfTerms "+numberOfTerms);
+		System.out.println(output);
+
 		
 		// make a for loop that asks contiuously for the values 
 		

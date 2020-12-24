@@ -28,16 +28,34 @@ public class term {
 	}
 	
 	public String addResult() {
-		String finalResult =" ";
-		if(coefficient != 1 && coefficient != 0) {
+		compute();
+		String finalResult ="";
+		if(coefficient != 0) {
 			// convert int to string 
 			String tempCoef = Integer.toString(coefficient);
 			String tempExp = Integer.toString(exponent);
+			
+//			System.out.println("The Coefficient is "+ tempCoef + "The exponent is "+ tempExp);
+			
+			
+			
+			if(exponent == 1) {
+				finalResult += tempCoef+"x";
+			}else {
+				finalResult += tempCoef+"x"+"^"+tempExp;
+			}
+			
+			// return the coefficient with just x 
+//			if(coefficient ==1) {
+//				finalResult+= temp
+//			}
 			
 			
 
 			
 			// return 
+			return finalResult;
+
 		}
 		return finalResult;
 		
